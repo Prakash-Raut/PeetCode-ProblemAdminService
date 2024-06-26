@@ -19,14 +19,37 @@ async function addProblem(req, res, next) {
 			message: "New Problem created successfully",
 			data: createdProblem,
 		});
-	} catch (error) {   
+	} catch (error) {
 		next(error);
 	}
 }
 
-async function getProblem(req, res) {}
+async function getProblems(req, res, next) {
+	try {
+		const response = await service.getAllProblems();
+		console.log(response);
+		return res.status(StatusCodes.OK).json({
+			success: true,
+			message: "Successfully fetched all the problems",
+			data: response,
+		});
+	} catch (error) {
+		next(error);
+	}
+}
 
-async function getProblems(req, res) {}
+async function getProblem(req, res, next) {
+	try {
+		const problem = await service.getProblem(req.params.id);
+		return res.status(StatusCodes.OK).json({
+			success: true,
+			message: "Successfully fetched a problem",
+			data: problem,
+		});
+	} catch (error) {
+		next(error);
+	}
+}
 
 async function deleteProblem(req, res) {}
 
