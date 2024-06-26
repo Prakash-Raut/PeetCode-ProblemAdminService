@@ -1,0 +1,25 @@
+{
+  "name": "problemadminservice",
+  "version": "1.0.0",
+  "description": "admin service to manage problem in peetcode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prakash-Raut/PeetCode-ProblemAdminService.git"
+  },
+  "keywords": [
+    "problem",
+    "admin",
+    "microservice",
+    "peetcode"
+  ],
+  "author": "Prakash Raut",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prakash-Raut/PeetCode-ProblemAdminService/issues"
+  },
+  "homepage": "https://github.com/Prakash-Raut/PeetCode-ProblemAdminService#readme"
+}
