@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "admin service to manage problem in peetcode",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "npx nodemon src/index.js"
   },
