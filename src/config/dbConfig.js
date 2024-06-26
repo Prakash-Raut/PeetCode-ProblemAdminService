@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-const { ENVIRONMENT, MONGO_URI, DB_NAME } = require("./serverConfig");
+const { ENVIRONMENT, MONGO_URI } = require("./serverConfig");
 
 async function connectDB() {
 	try {
 		if (ENVIRONMENT == "development") {
-			await mongoose.connect(`${MONGO_URI}/${DB_NAME}`);
+			await mongoose.connect(MONGO_URI);
 			console.log("Database Connected Successfully !");
 		}
 	} catch (error) {
