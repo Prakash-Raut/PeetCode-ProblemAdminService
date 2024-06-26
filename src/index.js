@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const { PORT } = require("./config/serverConfig");
 const apiRouter = require("./routes");
 const errorHandler = require("./utils/errorHandler");
+const connectDB = require("./config/dbConfig");
 
 const app = express();
 
@@ -18,7 +19,8 @@ app.get("/ping", (req, res) => {
 	return res.json({ message: "pong" });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
 	console.log(`Environment: ${process.env.ENVIRONMENT}`);
 	console.log(`Server is running on port: ${PORT}`);
+	await connectDB();
 });
